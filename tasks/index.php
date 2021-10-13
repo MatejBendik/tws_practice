@@ -50,12 +50,12 @@ $userInput = $_POST['userInput'];
 if(in_array($userInput,$films)){
     if(array_keys($films, $userInput)){
         $indexOfValue = array_search($userInput,$films);
-        echo $userInput . "<br>";
-        echo $lists[$indexOfValue] . "<br>";
-        echo $rating[$indexOfValue] . "<br>";
+        echo "<p>" . $userInput . "</p>";
+        echo "<p>" . $lists[$indexOfValue] . "</p>";
+        echo "<p> Rating: " . $rating[$indexOfValue] . " % </p>" ;
     }
 } else {
-    echo "This film don't exist in our database";
+    echo " <br> <p> This film don't exist in our database </p>";
 }
 
 
