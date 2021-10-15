@@ -13,10 +13,10 @@
 
 <form action="index.php" method="post">
   <div class="form-group">
-    <label for="formGroupExampleInput">Input name of film</label>
+    <label for="formGroupExampleInput">Tws practice</label>
     <input type="text" class="form-control" id="userInput" name="userInput" placeholder="Borat 2">
   </div>
-<button type="submit" class="btn btn-primary" id="submit">Sign in</button>
+<button type="submit" class="btn btn-primary" id="submit">Check</button>
 </form>
 
 <?php 
@@ -50,12 +50,12 @@ $userInput = $_POST['userInput'];
 if(in_array($userInput,$films)){
     if(array_keys($films, $userInput)){
         $indexOfValue = array_search($userInput,$films);
-        echo "<p>" . $userInput . "</p>";
-        echo "<p>" . $lists[$indexOfValue] . "</p>";
+        echo "<p> Film name: " . $userInput . "</p>";
+        echo "<p> Description:" . $lists[$indexOfValue] . "</p>";
         echo "<p> Rating: " . $rating[$indexOfValue] . " % </p>" ;
     }
 } else {
-    echo " <br> <p> This film don't exist in our database </p>";
+    echo " <br> <p> This film is not in our database </p>";
 }
 
 
