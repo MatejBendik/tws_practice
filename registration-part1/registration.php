@@ -55,8 +55,6 @@ if (isset($_POST["submit"]) && !empty($_POST["submit"])) {
                             }
 
                             $mysql->close();
-
-                            header('Location: login.php');
                             exit();
                         }
                     }
